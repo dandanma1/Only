@@ -2,6 +2,7 @@ package com.example.only;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Long number =0L;
                 String password = null;
-                number = getLong (et_number.getText().toString());
-                password = et_number.getText().toString();
+                number =  Long.parseLong(et_number.getText().toString());
+                Log.d("number=====",number+"");
+                password = et_password.getText().toString();
+                Log.d("password=====",password);
                 if (number == 12345678912L && password.equals("abc123")){
                     Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                 }else {
