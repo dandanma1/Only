@@ -1,5 +1,6 @@
 package com.example.only;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
+        isLoginSuccess();
+
+
+
+    }
+/**
+ * 判断用户名密码是否正确，正确登录成功，错误登录失败
+ *
+ *
+ * */
+    private void isLoginSuccess() {
         but_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,26 +45,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("password=====",password);
                 if (number == 12345678912L && password.equals("abc123")){
                     Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainActivity.this, TalkingActivity.class);
+                    startActivity(i);
                 }else {
                     Toast.makeText(MainActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-
-
     }
-/**
- * 判断用户名密码是否正确，正确登录成功，错误登录失败
- //* @param  number
- //* @param  password
- *
-    private void login(long number, String password) {
-        number = getLong (et_number.getText().toString());
-        password = et_number.getText().toString();
-        if (number == 12345678912L && password.equals("abc123"));
-
-    }*/
 
     //初始化
     public void init(){

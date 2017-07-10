@@ -8,22 +8,25 @@
     tools:context="com.example.only.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:text="@string/telephone_number"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/number"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintVertical_bias="0.344"
-        android:id="@+id/textView4"/>
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
 
     <EditText
         android:id="@+id/number"
-        android:layout_width="wrap_content"
+        android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
@@ -32,20 +35,25 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="50dp"/>
+        android:layout_marginRight="66dp"
+        android:layout_marginBottom="-1dp"/>
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password"
-        tools:layout_constraintTop_creator="1"
+        android:id="@+id/textView"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
         android:layout_marginStart="52dp"
-        tools:layout_constraintLeft_creator="1"
+        android:layout_marginTop="67dp"
+        android:text="@string/password"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="247dp"/>
+        app:layout_constraintRight_toRightOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"/>
 
     <EditText
         android:id="@+id/password"
@@ -56,10 +64,11 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="@+id/number"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/number"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/number"/>
+        app:layout_constraintLeft_toLeftOf="@+id/number"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/number"/>
 
     <Button
         android:id="@+id/login"
@@ -69,9 +78,12 @@
         android:layout_marginStart="29dp"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintLeft_toLeftOf="@+id/password"
-        android:layout_marginLeft="29dp"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 </android.support.constraint.ConstraintLayout>
