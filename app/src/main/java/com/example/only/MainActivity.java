@@ -45,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("password=====",password);
                 if (number == 12345678912L && password.equals("abc123")){
                     Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity.this, TalkingActivity.class);
+                    Intent i = new Intent(MainActivity.this, AddFriendActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
                     Toast.makeText(MainActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
