@@ -10,41 +10,41 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText et_number;
-    private EditText et_password;
-    private Button but_register;
-    private Button but_cancel;
+    private EditText mEditTextNumber;
+    private EditText mEditTextPassword;
+    private Button mButtonRegister;
+    private Button mButtonCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         init();
-        but_register.setOnClickListener(this);
-        but_cancel.setOnClickListener(this);
+        mButtonRegister.setOnClickListener(this);
+        mButtonCancel.setOnClickListener(this);
 
 
     }
 
     //初始化
     public void init() {
-        et_number = (EditText) findViewById(R.id.number);
-        et_password = (EditText) findViewById(R.id.password);
-        but_register = (Button) findViewById(R.id.but_login);
-        but_cancel = (Button) findViewById(R.id.but_cancel);
+        mEditTextNumber = (EditText) findViewById(R.id.number);
+        mEditTextPassword = (EditText) findViewById(R.id.password);
+        mButtonRegister = (Button) findViewById(R.id.but_login);
+        mButtonCancel = (Button) findViewById(R.id.but_cancel);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            //判断用户名密码是否正确，正确登录成功，错误登录失败
+/*            //判断用户名密码是否正确，正确登录成功，错误登录失败
             case R.id.login:{
                 Long number = 0L;
                 String password = null;
-                String strNumber =et_number.getText().toString();
+                String strNumber =mEditTextNumber.getText().toString();
                 number = Long.parseLong(strNumber);
 
-                password = et_password.getText().toString();
+                password = mEditTextPassword.getText().toString();
                 int lengthNumber = strNumber.length();
 //判断用户名、密码大小、类型、服务端代码存储
                 //http://blog.csdn.net/jdsjlzx/article/details/41441147
@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(i);
                 finish();
 
-            }
+            }*/
         }
     }
 }

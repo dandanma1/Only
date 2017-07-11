@@ -13,10 +13,10 @@ import static java.lang.Integer.getInteger;
 import static java.lang.Long.getLong;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText et_number;
-    private EditText et_password;
-    private Button but_login;
-    private Button but_register;
+    private EditText mEditTextNumber;
+    private EditText mEditTextPassword;
+    private Button mButtonLogin;
+    private Button mButtonRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +24,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         init();
-        but_login.setOnClickListener(this);
-        but_register.setOnClickListener(this);
+        mButtonLogin.setOnClickListener(this);
+        mButtonRegister.setOnClickListener(this);
 
 
     }
 
         //初始化
     public void init() {
-        et_number = (EditText) findViewById(R.id.number);
-        et_password = (EditText) findViewById(R.id.password);
-        but_login = (Button) findViewById(R.id.but_login);
-        but_register = (Button) findViewById(R.id.but_register);
+        mEditTextNumber = (EditText) findViewById(R.id.number);
+        mEditTextPassword = (EditText) findViewById(R.id.password);
+        mButtonLogin = (Button) findViewById(R.id.but_login);
+        mButtonRegister = (Button) findViewById(R.id.but_register);
     }
 
     @Override
@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.login:{
                     Long number = 0L;
                     String password = null;
-                    number = Long.parseLong(et_number.getText().toString());
+                    number = Long.parseLong(mEditTextNumber.getText().toString());
                     Log.d("number=====", number + "");
-                    password = et_password.getText().toString();
+                    password = mEditTextPassword.getText().toString();
                     Log.d("password=====", password);
                     if (number == 12345678912L && password.equals("abc123")) {
                         Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
